@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             height: 690.h,
             width: 360.w,
             child: Image.asset(
-              Images.imageFour,
+              Images.startPageImage,
               fit: BoxFit.fill,
             ),
           ),
@@ -123,7 +123,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       onTap: (){
                         _controller.forward();
                         Future.delayed(const Duration(milliseconds: 1500), () {
-                          context.go('/pageOne');
+                          context.go('/startPage');
                         });
                       },
                       child: Container(

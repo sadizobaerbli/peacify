@@ -17,7 +17,7 @@ class PageFour extends StatelessWidget {
           SizedBox(
             height: 690.h, width: 360.w,
             child: Image.asset(
-              Images.imageThree,
+              Images.lastPageImage,
               fit: BoxFit.fill,
             ),
           ),

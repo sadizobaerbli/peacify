@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:peacify/config/text_styles.dart';
 import 'package:peacify/pages/home_page.dart';
 import 'package:peacify/pages/splash_page.dart';
+import 'package:peacify/pages/start_page.dart';
 import 'package:peacify/routes/route_names.dart';
 import '../pages/page_one.dart';
 import '../pages/page_four.dart';
@@ -31,6 +32,19 @@ final router = GoRouter(
             child: const HomePage(),
           );
         },
+      ),
+      GoRoute(
+        path: '/startPage',
+        pageBuilder: (context, state) => CustomTransitionPage<void>(
+            key: state.pageKey,
+            child: const StartPage(),
+            transitionsBuilder: (context, animation, secondaryAnimation, child){
+              return FadeTransition(
+                opacity: animation,
+                child: child,
+              );
+            }
+        ),
       ),
       GoRoute(
         path: '/pageOne',
